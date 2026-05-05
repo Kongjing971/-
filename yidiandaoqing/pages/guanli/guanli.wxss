@@ -1,0 +1,71 @@
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10rpx;
+}
+
+.zhuangtai {
+  color: #8f1f1a;
+  font-weight: 600;
+  background: #f7e6d5;
+  border-radius: 999rpx;
+  padding: 4rpx 14rpx;
+}
+
+.xinxi {
+  margin-top: 6rpx;
+  color: #725c45;
+}
+
+.shuru {
+  margin-top: 12rpx;
+  padding: 14rpx;
+  border: 1rpx solid #e2ceb0;
+  border-radius: 10rpx;
+  background: #fffaf2;
+}
+
+.anniu {
+  margin-top: 16rpx;
+}
+
+.shaixuan-row {
+  margin-top: 14rpx;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10rpx;
+}
+
+.shaixuan {
+  padding: 10rpx 22rpx;
+  border-radius: 999rpx;
+  border: 1rpx solid #ddc5a2;
+  background: #fcf3e5;
+  color: #7a6044;
+}
+
+.xuanzhong {
+  background: #8f1f1a;
+  color: #fff6eb;
+  border-color: #8f1f1a;
+}
+
+.xian {
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx 0;
+  border-bottom: 1rpx dashed #dbc6a0;
+}
+
+.heji {
+  margin-top: 12rpx;
+  text-align: right;
+  color: #8f1f1a;
+  font-weight: 700;
+}
+
+.gonggao-shuru {
+  min-height: 120rpx;
+}

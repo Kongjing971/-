@@ -1,0 +1,19 @@
+<view class="zhongshi-mian">
+  <view class="ka-pian">
+    <view class="biaoti">确认商品</view>
+    <view class="xian" wx:for="{{gouwuche}}" wx:key="id">
+      <text>{{item.mingzi}} x {{item.shuliang}}</text>
+      <text>¥{{item.jiage * item.shuliang}}</text>
+    </view>
+    <view class="heji">合计：¥{{zongjia}}</view>
+  </view>
+
+  <view class="ka-pian">
+    <view class="biaoti">填写配送地址</view>
+    <input class="shuru" placeholder="联系人" data-key="lianxiren" value="{{lianxiren}}" bindinput="shuru" />
+    <input class="shuru" placeholder="手机号" data-key="shouji" value="{{shouji}}" bindinput="shuru" />
+    <input class="shuru" placeholder="寝室号，例如：梅园3栋201" data-key="qinshihao" value="{{qinshihao}}" bindinput="shuru" />
+    <textarea class="shuru beizhu" placeholder="备注（可不填）" data-key="beizhu" bindinput="shuru"></textarea>
+    <button class="anniu-hong tijiao" bindtap="tijiaoDingdan">提交订单</button>
+  </view>
+</view>

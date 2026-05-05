@@ -1,0 +1,25 @@
+.anniu {
+  margin-top: 16rpx;
+}
+
+.jindu-ka {
+  margin-top: 14rpx;
+  padding: 16rpx;
+  border: 1rpx solid #e7d6bf;
+  border-radius: 12rpx;
+  background: #fffdf7;
+}
+
+.jindu-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.zhuangtai {
+  padding: 4rpx 14rpx;
+  border-radius: 999rpx;
+  background: #9d2a24;
+  color: #fff5e8;
+  font-size: 24rpx;
+}

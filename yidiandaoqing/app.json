@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/shouye/shouye",
+    "pages/denglu/denglu",
+    "pages/yonghu/yonghu",
+    "pages/xiadan/xiadan",
+    "pages/guanli/guanli",
+    "pages/peisong/peisong"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#8F1F1A",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "一点就送达",
+    "backgroundColor": "#F8F2E7",
+    "backgroundTextStyle": "light"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

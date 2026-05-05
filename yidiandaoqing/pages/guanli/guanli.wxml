@@ -1,0 +1,70 @@
+<view class="zhongshi-mian">
+  <view class="ka-pian">
+    <view class="biaoti">管理员订单查看</view>
+    <view class="fubiaoti">可以看到用户购买内容和配送地址，也可以看今日流水</view>
+  </view>
+
+  <view class="ka-pian">
+    <view class="biaoti">今日流水</view>
+    <view class="xinxi">今日营业额：¥{{jinyingyee}}</view>
+    <view class="xinxi">配送员工资（每件商品0.3）：¥{{peisonggongzi}}</view>
+    <view class="xinxi">今日到手：¥{{daoshou}}</view>
+  </view>
+
+  <view class="ka-pian">
+    <view class="biaoti">发布公告</view>
+    <textarea class="shuru gonggao-shuru" placeholder="请输入想通知给用户的内容" data-key="gonggaoshuru" value="{{gonggaoshuru}}" bindinput="shuru"></textarea>
+    <button class="anniu-hong anniu" bindtap="fabuGonggao">发布公告</button>
+    <view class="xinxi" wx:if="{{zuixinGonggao.neirong}}">当前公告：{{zuixinGonggao.neirong}}</view>
+    <view class="xinxi" wx:if="{{zuixinGonggao.shijian}}">发布时间：{{zuixinGonggao.shijian}}</view>
+  </view>
+
+  <view class="ka-pian">
+    <view class="biaoti">添加商品和定价</view>
+    <input class="shuru" placeholder="商品名称" data-key="xinshangpinming" value="{{xinshangpinming}}" bindinput="shuru" />
+    <input class="shuru" placeholder="价格" data-key="xinshangpinjiage" value="{{xinshangpinjiage}}" bindinput="shuru" />
+    <button class="anniu-hong anniu" bindtap="tianjiaShangpin">添加</button>
+  </view>
+
+  <view class="ka-pian">
+    <view class="biaoti">今日订单</view>
+    <view wx:if="{{!jintianDingdan.length}}" class="xinxi">今日还没有订单</view>
+  </view>
+
+  <view class="ka-pian" wx:for="{{jintianDingdan}}" wx:key="id" wx:for-item="dan">
+    <view class="top-row">
+      <text>下单时间：{{dan.shijian}}</text>
+      <text class="zhuangtai">{{dan.zhuangtai}}</text>
+    </view>
+    <view class="xinxi">联系人：{{dan.lianxiren}}（{{dan.shouji}}）</view>
+    <view class="xinxi">配送地址：{{dan.dizhi}}</view>
+    <view class="xinxi" wx:if="{{dan.beizhu}}">备注：{{dan.beizhu}}</view>
+
+    <view class="xian" wx:for="{{dan.shangpin}}" wx:key="id" wx:for-item="sp">
+      <text>{{sp.mingzi}} x {{sp.shuliang}}</text>
+      <text>¥{{sp.jiage * sp.shuliang}}</text>
+    </view>
+    <view class="heji">订单合计：¥{{dan.zongjia}}</view>
+  </view>
+
+  <view class="ka-pian">
+    <view class="biaoti">历史订单记录</view>
+    <view wx:if="{{!lishiDingdan.length}}" class="xinxi">暂无历史订单</view>
+  </view>
+
+  <view class="ka-pian" wx:for="{{lishiDingdan}}" wx:key="id" wx:for-item="dan">
+    <view class="top-row">
+      <text>下单时间：{{dan.shijian}}</text>
+      <text class="zhuangtai">{{dan.zhuangtai}}</text>
+    </view>
+    <view class="xinxi">联系人：{{dan.lianxiren}}（{{dan.shouji}}）</view>
+    <view class="xinxi">配送地址：{{dan.dizhi}}</view>
+    <view class="xinxi" wx:if="{{dan.beizhu}}">备注：{{dan.beizhu}}</view>
+
+    <view class="xian" wx:for="{{dan.shangpin}}" wx:key="id" wx:for-item="sp">
+      <text>{{sp.mingzi}} x {{sp.shuliang}}</text>
+      <text>¥{{sp.jiage * sp.shuliang}}</text>
+    </view>
+    <view class="heji">订单合计：¥{{dan.zongjia}}</view>
+  </view>
+</view>

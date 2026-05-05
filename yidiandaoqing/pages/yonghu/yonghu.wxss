@@ -1,0 +1,57 @@
+.shangpin-row {
+  display: flex;
+  align-items: center;
+}
+
+.yuan-tu {
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: 50%;
+  background: #f2e2c9;
+  color: #9d2a24;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34rpx;
+  margin-right: 20rpx;
+}
+
+.xinxi {
+  flex: 1;
+}
+
+.mingzi {
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+.jiage {
+  color: #9d2a24;
+  margin-top: 8rpx;
+}
+
+.caozuo {
+  display: flex;
+  align-items: center;
+  gap: 12rpx;
+}
+
+.shuliang {
+  min-width: 40rpx;
+  text-align: center;
+}
+
+.gouwuche-ka {
+  position: sticky;
+  bottom: 20rpx;
+}
+
+.zongjia {
+  color: #9d2a24;
+  font-size: 34rpx;
+  font-weight: 700;
+}
+
+.quxiadan {
+  margin-top: 16rpx;
+}

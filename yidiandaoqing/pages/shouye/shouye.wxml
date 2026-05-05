@@ -1,0 +1,59 @@
+<view class="zhongshi-mian">
+  <view class="ka-pian">
+    <view class="biaoti">你好，{{gerenziliao.xingming}}</view>
+    <view class="fubiaoti">寝室：{{gerenziliao.qinshihao}} | 电话：{{gerenziliao.shouji}}</view>
+  </view>
+
+  <view class="ka-pian" wx:if="{{gerenziliao.shenfen==='yonghu'}}">
+    <view class="biaoti">公告栏</view>
+    <view class="fubiaoti" wx:if="{{gonggao.neirong}}">{{gonggao.neirong}}</view>
+    <view class="fubiaoti" wx:if="{{gonggao.shijian}}">发布时间：{{gonggao.shijian}}</view>
+    <view class="fubiaoti" wx:if="{{!gonggao.neirong}}">当前暂无公告</view>
+  </view>
+
+  <view class="ka-pian" wx:if="{{gerenziliao.shenfen==='yonghu'}}">
+    <view class="biaoti">今日配送进度</view>
+    <view class="fubiaoti">每天更新一次，展示今天的订单进度</view>
+    <view wx:if="{{!jintianPeisongJindu.length}}" class="fubiaoti">今天还没有下单记录</view>
+    <view class="jindu-ka" wx:for="{{jintianPeisongJindu}}" wx:key="id" wx:for-item="dan">
+      <view class="jindu-top">
+        <text>{{dan.shijian}}</text>
+        <text class="zhuangtai">{{dan.zhuangtai}}</text>
+      </view>
+      <view class="fubiaoti">地址：{{dan.dizhi}}</view>
+      <view class="fubiaoti">金额：¥{{dan.zongjia}}</view>
+    </view>
+  </view>
+
+  <view class="ka-pian" wx:if="{{gerenziliao.shenfen==='yonghu'}}">
+    <view class="biaoti">历史购买记录</view>
+    <view wx:if="{{!lishiGoumaiJilu.length}}" class="fubiaoti">暂无历史购买记录</view>
+    <view class="jindu-ka" wx:for="{{lishiGoumaiJilu}}" wx:key="id" wx:for-item="dan">
+      <view class="jindu-top">
+        <text>{{dan.shijian}}</text>
+        <text class="zhuangtai">{{dan.zhuangtai}}</text>
+      </view>
+      <view class="fubiaoti">地址：{{dan.dizhi}}</view>
+      <view class="fubiaoti">金额：¥{{dan.zongjia}}</view>
+    </view>
+  </view>
+
+  <view class="ka-pian" wx:if="{{gerenziliao.shenfen==='yonghu'}}">
+    <view class="biaoti">用户功能</view>
+    <button class="anniu-hong anniu" data-url="/pages/yonghu/yonghu" bindtap="quGongneng">去买东西</button>
+  </view>
+
+  <view class="ka-pian" wx:if="{{gerenziliao.shenfen==='guanliyuan'}}">
+    <view class="biaoti">管理员功能</view>
+    <button class="anniu-hong anniu" data-url="/pages/guanli/guanli" bindtap="quGongneng">查看订单和流水</button>
+  </view>
+
+  <view class="ka-pian" wx:if="{{gerenziliao.shenfen==='peisongyuan'}}">
+    <view class="biaoti">配送员功能</view>
+    <button class="anniu-hong anniu" data-url="/pages/peisong/peisong" bindtap="quGongneng">查看待配送订单</button>
+  </view>
+
+  <view class="ka-pian">
+    <button class="anniu-jin anniu" bindtap="tuichu">退出登录</button>
+  </view>
+</view>

@@ -1,0 +1,30 @@
+<view class="zhongshi-mian">
+  <view class="ka-pian">
+    <view class="biaoti">一点就送达</view>
+    <view class="fubiaoti">挑选商品后去填写地址提交订单</view>
+  </view>
+
+  <view class="ka-pian" wx:if="{{!shangpinliebiao.length}}">
+    <view>商品区暂时留白，等待管理员添加商品和定价。</view>
+  </view>
+
+  <view class="ka-pian" wx:for="{{shangpinliebiao}}" wx:key="id">
+    <view class="shangpin-row">
+      <view class="yuan-tu">{{item.tupianwenzi}}</view>
+      <view class="xinxi">
+        <view class="mingzi">{{item.mingzi}}</view>
+        <view class="jiage">¥{{item.jiage}}</view>
+      </view>
+      <view class="caozuo">
+        <button size="mini" class="anniu-jin" data-id="{{item.id}}" bindtap="jianYiFen">-</button>
+        <text class="shuliang">{{shuliangMap[item.id] || 0}}</text>
+        <button size="mini" class="anniu-hong" data-id="{{item.id}}" bindtap="jiaYiFen">+</button>
+      </view>
+    </view>
+  </view>
+
+  <view class="ka-pian gouwuche-ka">
+    <view>已选 {{gouwuche.length}} 种，合计 <text class="zongjia">¥{{zongjia}}</text></view>
+    <button class="anniu-hong quxiadan" bindtap="quXiadan">去填写地址</button>
+  </view>
+</view>

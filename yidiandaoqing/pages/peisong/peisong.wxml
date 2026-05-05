@@ -1,0 +1,59 @@
+<view class="zhongshi-mian">
+  <view class="ka-pian">
+    <view class="biaoti">配送订单</view>
+    <view class="fubiaoti">先接单，再送达</view>
+  </view>
+
+  <view class="ka-pian">
+    <view class="biaoti">今日统计</view>
+    <view class="xinxi">今日已送达：{{jintianSongda}} 单</view>
+    <view class="xinxi">今日已送商品：{{jintianSongdaJianshu}} 件</view>
+    <view class="xinxi">今日工资（每件0.3）：¥{{jintianGongzi}}</view>
+  </view>
+
+  <view class="ka-pian">
+    <view class="biaoti">进行中订单</view>
+    <view wx:if="{{!jinxingzhong.length}}" class="xinxi">当前没有进行中订单</view>
+    <view class="dan-ka" wx:for="{{jinxingzhong}}" wx:key="id" wx:for-item="dan">
+      <view class="top-row">
+        <text>{{dan.shijian}}</text>
+        <text class="zhuangtai">{{dan.zhuangtai}}</text>
+      </view>
+      <view class="xinxi">联系人：{{dan.lianxiren}} {{dan.shouji}}</view>
+      <view class="xinxi">地址：{{dan.dizhi}}</view>
+      <view class="xinxi">订单金额：¥{{dan.zongjia}}</view>
+      <view class="anniu-row">
+        <button wx:if="{{dan.zhuangtai==='待配送'}}" size="mini" class="anniu-jin" data-id="{{dan.id}}" data-zhuangtai="配送中" bindtap="gaiZhuangtai">接单</button>
+        <button wx:if="{{dan.zhuangtai==='配送中'}}" size="mini" class="anniu-hong" data-id="{{dan.id}}" data-zhuangtai="已送达" bindtap="gaiZhuangtai">送达</button>
+      </view>
+    </view>
+  </view>
+
+  <view class="ka-pian">
+    <view class="biaoti">今日已完成订单</view>
+    <view wx:if="{{!jintianYiWancheng.length}}" class="xinxi">今天还没有完成订单</view>
+    <view class="dan-ka" wx:for="{{jintianYiWancheng}}" wx:key="id" wx:for-item="dan">
+      <view class="top-row">
+        <text>{{dan.shijian}}</text>
+        <text class="zhuangtai wancheng">{{dan.zhuangtai}}</text>
+      </view>
+      <view class="xinxi">联系人：{{dan.lianxiren}} {{dan.shouji}}</view>
+      <view class="xinxi">地址：{{dan.dizhi}}</view>
+      <view class="xinxi">订单金额：¥{{dan.zongjia}}</view>
+    </view>
+  </view>
+
+  <view class="ka-pian">
+    <view class="biaoti">历史完成记录</view>
+    <view wx:if="{{!lishiYiWancheng.length}}" class="xinxi">暂无历史完成记录</view>
+    <view class="dan-ka" wx:for="{{lishiYiWancheng}}" wx:key="id" wx:for-item="dan">
+      <view class="top-row">
+        <text>{{dan.shijian}}</text>
+        <text class="zhuangtai wancheng">{{dan.zhuangtai}}</text>
+      </view>
+      <view class="xinxi">联系人：{{dan.lianxiren}} {{dan.shouji}}</view>
+      <view class="xinxi">地址：{{dan.dizhi}}</view>
+      <view class="xinxi">订单金额：¥{{dan.zongjia}}</view>
+    </view>
+  </view>
+</view>

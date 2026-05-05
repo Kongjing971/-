@@ -1,0 +1,84 @@
+.container {
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='1200' viewBox='0 0 800 1200'%3E%3Cpath d='M0 930 C120 860 230 860 340 930 C420 980 530 980 640 920 C710 880 760 870 800 890 L800 1200 L0 1200 Z' fill='%23d7c5a6' fill-opacity='0.24'/%3E%3Cpath d='M0 1000 C120 930 230 930 340 1000 C420 1040 530 1040 640 980 C710 940 760 930 800 950 L800 1200 L0 1200 Z' fill='%23eadfcd' fill-opacity='0.7'/%3E%3C/svg%3E"),
+    linear-gradient(180deg, #fbf7f0 0%, #f2e7d8 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 26rpx 24rpx 36rpx;
+}
+
+.card {
+  margin: 0;
+  padding: 30rpx;
+  background: rgba(255, 250, 242, 0.78);
+  border-radius: 20rpx;
+  border: 1rpx solid #e2ceb0;
+  box-shadow: 0 12rpx 26rpx rgba(122, 72, 34, 0.12);
+  backdrop-filter: blur(10rpx);
+  -webkit-backdrop-filter: blur(10rpx);
+}
+
+.welcome {
+  display: block;
+  font-size: 36rpx;
+  color: #7a2f2f;
+  font-weight: bold;
+}
+
+.desc {
+  display: block;
+  font-size: 24rpx;
+  color: #8f7d67;
+  margin-top: 10rpx;
+  margin-bottom: 26rpx;
+}
+
+.input {
+  margin-top: 16rpx;
+  padding: 20rpx;
+  border-radius: 12rpx;
+  border: 1rpx solid #e0d5c3;
+  background: #fff;
+}
+
+.role {
+  margin-top: 24rpx;
+  color: #6b4f3b;
+}
+
+.role-btns {
+  display: flex;
+  gap: 20rpx;
+  margin-top: 14rpx;
+}
+
+.role-btns button {
+  flex: 1;
+  background: #f0e6d6;
+  border-radius: 30rpx;
+  color: #6b4f3b;
+  border: 1rpx solid #e0d5c3;
+}
+
+.role-btns .active {
+  background: #8b2c2c;
+  color: #fff;
+  border-color: #8b2c2c;
+}
+
+.submit {
+  margin-top: 30rpx;
+  background: linear-gradient(90deg, #8f1f1a 0%, #a9352f 100%);
+  color: #fff;
+  border-radius: 40rpx;
+  box-shadow: 0 8rpx 16rpx rgba(132, 37, 31, 0.25);
+}
+
+.secondary {
+  margin-top: 20rpx;
+  background: linear-gradient(90deg, #f3e3c7 0%, #e7cfa5 100%);
+  color: #6f4a24;
+  border-radius: 40rpx;
+  border: 1rpx solid #d8bb8f;
+}

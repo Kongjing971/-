@@ -1,0 +1,31 @@
+<view class="container">
+  <view class="card">
+    <text class="welcome">欢迎来到一点就送达</text>
+    <text class="desc">先填写基础信息，再进入对应页面</text>
+
+    <input class="input" placeholder="姓名" data-key="xingming" value="{{xingming}}" bindinput="shuru" />
+    <input class="input" placeholder="寝室号，如梅园3栋201" data-key="qinshihao" value="{{qinshihao}}" bindinput="shuru" />
+    <input class="input" placeholder="电话号码" data-key="shouji" value="{{shouji}}" bindinput="shuru" />
+
+    <view class="role">
+      <text>选择身份</text>
+      <view class="role-btns">
+        <button class="{{shenfen==='yonghu' ? 'active' : ''}}" data-shenfen="yonghu" bindtap="xuanShenfen">用户</button>
+        <button class="{{shenfen==='guanliyuan' ? 'active' : ''}}" data-shenfen="guanliyuan" bindtap="xuanShenfen">管理员</button>
+        <button class="{{shenfen==='peisongyuan' ? 'active' : ''}}" data-shenfen="peisongyuan" bindtap="xuanShenfen">配送员</button>
+      </view>
+    </view>
+
+    <input
+      wx:if="{{shenfen!=='yonghu'}}"
+      class="input"
+      password
+      placeholder="{{shenfen==='guanliyuan' ? '请输入管理员密码' : '请输入配送员密码'}}"
+      data-key="mima"
+      value="{{mima}}"
+      bindinput="shuru"
+    />
+
+    <button class="submit" bindtap="denglu">进入系统</button>
+  </view>
+</view>

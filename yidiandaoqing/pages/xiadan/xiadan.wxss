@@ -1,0 +1,29 @@
+.xian {
+  display: flex;
+  justify-content: space-between;
+  padding: 12rpx 0;
+  border-bottom: 1rpx dashed #d9c19b;
+}
+
+.heji {
+  margin-top: 14rpx;
+  color: #8f1f1a;
+  font-size: 32rpx;
+  font-weight: 700;
+}
+
+.shuru {
+  margin-top: 16rpx;
+  padding: 16rpx;
+  background: #fffaf2;
+  border: 1rpx solid #e2ceb0;
+  border-radius: 10rpx;
+}
+
+.beizhu {
+  min-height: 120rpx;
+}
+
+.tijiao {
+  margin-top: 22rpx;
+}

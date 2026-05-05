@@ -1,0 +1,36 @@
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.zhuangtai {
+  color: #8f1f1a;
+  background: #f7e6d5;
+  border-radius: 999rpx;
+  padding: 4rpx 14rpx;
+}
+
+.xinxi {
+  margin-top: 8rpx;
+  color: #725c45;
+}
+
+.anniu-row {
+  margin-top: 14rpx;
+  display: flex;
+  gap: 12rpx;
+}
+
+.dan-ka {
+  margin-top: 14rpx;
+  padding: 16rpx;
+  border-radius: 12rpx;
+  border: 1rpx solid #e2ceb0;
+  background: #fffaf2;
+}
+
+.wancheng {
+  background: #e8f1de;
+  color: #567237;
+}
